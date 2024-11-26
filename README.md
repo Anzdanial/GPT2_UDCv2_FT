@@ -29,7 +29,7 @@
 
 ## **Introduction**
 
-This guide provides a comprehensive walkthrough of fine-tuning the GPT-2 language model on the **Ubuntu Dialogue Corpus v2 (UDCv2)** to build a retrieval-based chatbot. We'll cover everything from dataset understanding and preprocessing to model training and evaluation.
+This guide provides a comprehensive walkthrough of fine-tuning the GPT-2 language model on the **Ubuntu Dialogue Corpus v2 (UDCv2)**. We'll cover everything from dataset understanding and preprocessing to model training and evaluation.
 
 ---
 ## **Dataset Overview**
