@@ -78,6 +78,13 @@ print(torch.cuda.is_available())
 
 ---
 
+### **3. Update FilePath in evaluate.py and train.py**
+
+```
+data_dir = 'C:\\Anas\'s Data\\Ubuntu_Corpus_V2'  # Update this path
+
+```
+
 ## **Data Preprocessing**
 
 To fine-tune GPT-2, we need to preprocess the dataset appropriately.
