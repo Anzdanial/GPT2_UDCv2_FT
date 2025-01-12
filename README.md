@@ -7,6 +7,7 @@
 1. [Introduction](#introduction)
 2. [Dataset Overview](#dataset-overview)
     - [Dataset Structure](#dataset-structure)
+    - [General Workflow](#general-workflow)
 3. [Environment Setup](#environment-setup)
 4. [Data Preprocessing](#data-preprocessing)
     - [Loading Responses](#loading-responses)
@@ -52,19 +53,53 @@ Ubuntu_Corpus_V2/
 - **`responses.txt`**: Contains all unique responses.
 - **`train.txt`**, **`valid.txt`**, **`test.txt`**: Contain conversation contexts and indices referencing `responses.txt`.
 
+## General Workflow:
+
+1. The train.py file needs to be executed first, which starts the fine tuning process.
+2. The evaluate.py file can be executed afterwards to evaluate the results.
+3. The run.py offers an interface/menu to interact with the fine-tuned model.
+
+- train.py -> evaluate.py -> run.py
+
 ---
+
+## **Installation Setup**
+
+### 1. Installing CUDA Requirements
+
+- Install the CUDA Toolkit Package for setup. This can be found in the following link:
+``` 
+https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local 
+``` 
+- Install the cuDNN Library for deep learning requirements.
+``` 
+https://developer.nvidia.com/cudnn-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
+``` 
+
+### 2. Installing Pytorch Requirements
+- Install the Pytorch Package for GPT2 Model.
+``` 
+https://developer.nvidia.com/cudnn-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
+``` 
 
 ## **Environment Setup**
 
 ### **1. Install Required Libraries**
 
+- Create a new Conda Environment and then activate it for use.
 ```
-pip install transformers datasets torch nltk rouge_score
+conda create --name <my-env>
+conda activate <my-env>
+```
+- Install the following packages through conda for use:
+
+```
+conda install transformers datasets nltk
+pip install rouge_score
 ```
 
 - **`transformers`**: For the GPT-2 model and tokenizers.
 - **`datasets`**: For loading and processing datasets.
-- **`torch`**: PyTorch for model training.
 - **`nltk`**, **`rouge_score`**: For evaluation metrics.
 
 ### **2. Verify GPU Availability**
@@ -386,7 +421,7 @@ By following this guide, you've:
 - Understood the UDCv2 dataset structure.
 - Preprocessed the data for GPT-2 fine-tuning.
 - Fine-tuned GPT-2 on the conversation data.
-- 
+-
 ---
 
 ## **References**
